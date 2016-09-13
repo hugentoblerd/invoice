@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <p class="lead">
+    <img src="images/cirrusops_logo_trans_70px.png" alt="CirrusOps"><br>
+    Upload a PDF invoice to load it into QuickBase.
+  </p>
+  <p>
+  	<button id="upload" class="btn btn-success btn-sm btn-file">
+      <i class="glyphicon glyphicon-cloud-upload"></i>
+      <span>Upload</span>
+      <input id="files" type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+    </button>
+  </p>
+</div>
+

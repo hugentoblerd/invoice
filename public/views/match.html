@@ -1,0 +1,81 @@
+<div class="jumbotron">
+	<div class="">
+		<ul class="parsed-invoice list-group pull-left col-md-4">
+		  <h3 class="list-group-item">Company Info:</h3>
+		  <li id="{{key}}" class="list-group-item" ng-repeat="(key, item) in company_info" ondrop="angular.element(this).scope().drop(event)" ondragover="angular.element(this).scope().allowDrop(event)">
+		  	{{item}}: 
+		  </li>
+		</ul>
+		<ul class="parsed-invoice list-group pull-left col-md-4">
+			<h3 class="list-group-item">Invoice</h3>
+		  <li id="{{key}}" class="list-group-item" ng-repeat="(key, item) in invoice_info" ondrop="angular.element(this).scope().drop(event)" ondragover="angular.element(this).scope().allowDrop(event)">
+		  	{{item}}: 
+		  </li>
+		</ul>
+		<!-- VALUES -->
+		<ul class="pull-right list-group col-md-4">
+			<h3 class="list-group-item">Values</h3>
+	    <li class="list-group-item" ng-repeat="(key, item) in parsedPdf" >
+	    	<span class="{{key}}" draggable="true" ondragstart="angular.element(this).scope().drag(event)">
+	    		{{ item }}
+	    	</span>
+	    </li>
+	  </ul>
+	  <ul class="parsed-invoice list-group pull-left col-md-4">
+			<h3 class="list-group-item">Customer Bill To:</h3>
+		  <li id="{{key}}" class="list-group-item" ng-repeat="(key, item) in bill_to_info" ondrop="angular.element(this).scope().drop(event)" ondragover="angular.element(this).scope().allowDrop(event)">
+		  	{{item}}: 
+		  </li>
+		</ul>
+		<ul class="parsed-invoice list-group pull-left col-md-4">
+			<h3 class="list-group-item">Customer Ship To:</h3>
+		  <li id="{{key}}" class="list-group-item" ng-repeat="(key, item) in ship_to_info" ondrop="angular.element(this).scope().drop(event)" ondragover="angular.element(this).scope().allowDrop(event)">
+		  	{{item}}: 
+		  </li>
+		</ul>
+		<ul class="parsed-invoice list-group pull-left col-md-8">
+			<h3 class="list-group-item">Invoice Details</h3>
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		</ul>
+		<ul class="parsed-invoice list-group pull-left col-md-8">
+			<h3 class="list-group-item">Child Table</h3>
+			<li id="{{key}}" class="list-group-item" ng-repeat="(key, item) in child_table_info" ondrop="angular.element(this).scope().drop(event)" ondragover="angular.element(this).scope().allowDrop(event)">
+				{{item}}: 
+			</li>
+		</ul>
+	</div>
+	<div class="modal-footer" style="clear:both">
+	  <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+	  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	</div>
+</div>
+
+<!-- ReOrder Modal -->
+<!-- <div class="modal fade" id="reOrderModal" tabindex="-1" role="dialog" aria-labelledby="reOrderModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="reOrderModalLabel">Drag and Drop in the desired order</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="pdf-pg list-group pull-left"></ul>
+        <ul class="re-arrange list-group col-sm-10 col-xs-11 col-md-11 col-xl-11"></ul>
+        <form class="new_title" name="new_title" novalidate >
+		      <input id="new-pdf-name" class="col-sm-4 col-xs-4 col-md-4 col-xl-4" type="text" placeholder=" name your file" />
+		      <br>
+		      <br>
+		      <div class="pulling">
+						<input type="button" class="btn btn-default" value="Close" data-dismiss="modal" />
+						<input id="pdf-convert" type="button" class="btn btn-primary" value="Send" />
+					</div>
+		    </form>
+      </div>
+      <div class="modal-footer">
+			</div>
+    </div>
+  </div>
+</div> -->
